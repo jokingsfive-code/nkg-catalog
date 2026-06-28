@@ -538,23 +538,59 @@ Boleh bagi detail harga dan tempahan?`;
 )}
 
         <section className="catalogHero">
-          <div>
-            <span className="catalogBadge">NKG APPAREL CATALOG</span>
-            <h1>Choose Your Teamwear Design</h1>
-            <p>
-              Browse design pilihan NKG Apparel. Pilih design yang berkenan dan
-              terus WhatsApp kami untuk tempahan.
-            </p>
+  {activeFeaturedDesign && (
+    <img
+      className="heroBlurImage"
+      src={activeFeaturedDesign.image_url}
+      alt=""
+      aria-hidden="true"
+    />
+  )}
 
-            <a
-              className="catalogWhatsappMain mobileOnly"
-              href={`https://wa.me/${NKG_WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp NKG
-            </a>
-          </div>
+  <div className="catalogHeroText">
+    <span className="catalogBadge">NKG APPAREL CATALOG</span>
+    <h1>Choose Your Teamwear Design</h1>
+    <p>
+      Browse design pilihan NKG Apparel. Pilih design yang berkenan dan terus
+      WhatsApp kami untuk tempahan.
+    </p>
+  </div>
+
+  {activeFeaturedDesign ? (
+    <div className="heroFeaturedSlider">
+      <button
+        type="button"
+        className="heroFeaturedImage"
+        onClick={() => setSelectedCatalogDesign(activeFeaturedDesign)}
+      >
+        <img
+          src={activeFeaturedDesign.image_url}
+          alt={activeFeaturedDesign.name || "Featured design"}
+        />
+      </button>
+
+      <div className="heroFeaturedDots">
+        {featuredCatalogDesigns.map((design, index) => (
+          <button
+            key={design.id}
+            type="button"
+            className={index === activeFeaturedIndex ? "active" : undefined}
+            onClick={() => setActiveFeaturedIndex(index)}
+          />
+        ))}
+      </div>
+    </div>
+  ) : (
+    <a
+      className="catalogWhatsappMain desktopOnly"
+      href={`https://wa.me/${NKG_WHATSAPP_NUMBER}`}
+      target="_blank"
+      rel="noreferrer"
+    >
+      WhatsApp NKG
+    </a>
+  )}
+
 
           {activeFeaturedDesign ? (
   <div className="heroFeaturedSlider">
