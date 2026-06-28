@@ -80,9 +80,26 @@ function App() {
     toast.success("Logged out");
   };
   useEffect(() => {
-    fetchCategories();
-    fetchDesigns();
-  }, []);
+  const loadInitialData = async () => {
+    await fetchCategories();
+    await fetchDesigns();
+
+    const params = new URLSearchParams(window.location.search);
+    const designCode = params.get("design");
+
+    if (designCode) {
+      try {
+        const { data } = await api.get(`/design/code/${designCode}`);
+        setSelectedCatalogDesign(data);
+      } catch (error) {
+        console.error(error);
+        toast.error("Design not found");
+      }
+    }
+  };
+
+  loadInitialData();
+}, []);
 
   const fetchCategories = async () => {
     const { data } = await api.get("/categories");
@@ -103,7 +120,7 @@ function App() {
   const getWhatsappLink = (design) => {
   const designCode = getDesignCode(design);
   const baseUrl = "https://nkg-catalog.vercel.app";
-  const designLink = `${baseUrl}/design/${designCode}`;
+  const designLink = `${baseUrl}/?design=${designCode}`;
 
   const message = `Hi NKG Apparel,
 
