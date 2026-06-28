@@ -2152,3 +2152,466 @@ select {
   font-weight: 900;
   cursor: pointer;
 }
+
+/* =========================
+   PUBLIC CATALOG - WHITE FORMAL THEME
+========================= */
+
+.catalogPage {
+  min-height: 100vh;
+  background: #f4f5f7 !important;
+  color: #111827 !important;
+  padding: 32px 24px;
+}
+
+.catalogHero {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08) !important;
+}
+
+.catalogBadge {
+  color: #374151 !important;
+  background: #f3f4f6 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.catalogHero h1,
+.catalogSectionHead h2,
+.catalogCardInfo b {
+  color: #111827 !important;
+}
+
+.catalogHero p,
+.catalogSectionHead p,
+.catalogCardInfo span,
+.heroFeaturedText p {
+  color: #6b7280 !important;
+}
+
+.catalogHero::before,
+.catalogHero::after {
+  display: none !important;
+}
+
+.heroFeaturedSlider {
+  background: #f8fafc !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.heroFeaturedText span {
+  color: #374151 !important;
+}
+
+.heroFeaturedText h3 {
+  color: #111827 !important;
+}
+
+.heroFeaturedImage {
+  background: #ffffff !important;
+}
+
+.heroFeaturedImage img {
+  object-fit: contain !important;
+}
+
+.heroFeaturedActions button,
+.heroFeaturedActions a {
+  background: #111827 !important;
+  color: #ffffff !important;
+  border: 1px solid #111827 !important;
+}
+
+.heroFeaturedDots button {
+  background: #d1d5db !important;
+}
+
+.heroFeaturedDots button.active {
+  background: #111827 !important;
+}
+
+.catalogFilter input,
+.catalogFilter select {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+
+.catalogFilter input::placeholder {
+  color: #9ca3af !important;
+}
+
+.catalogSection {
+  background: transparent !important;
+}
+
+.catalogGrid {
+  gap: 24px !important;
+}
+
+.catalogCard,
+.featuredCatalogCard {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08) !important;
+  transition: 0.25s ease !important;
+}
+
+.catalogCard:hover,
+.featuredCatalogCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12) !important;
+}
+
+.catalogCard img {
+  background: #f9fafb !important;
+  object-fit: contain !important;
+}
+
+.catalogCardInfo {
+  background: #ffffff !important;
+  border-top: 1px solid #e5e7eb !important;
+}
+
+.designCode,
+.modalDesignCode {
+  background: #f3f4f6 !important;
+  color: #111827 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+.featuredRibbon {
+  background: #111827 !important;
+  color: #ffffff !important;
+}
+
+.catalogCardInfo a,
+.catalogWhatsappMain {
+  background: #111827 !important;
+  color: #ffffff !important;
+  border: 1px solid #111827 !important;
+}
+
+.catalogCardInfo a:hover,
+.catalogWhatsappMain:hover {
+  background: #374151 !important;
+  border-color: #374151 !important;
+}
+
+.catalogEmpty {
+  background: #ffffff !important;
+  color: #6b7280 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.catalogModalOverlay {
+  background: rgba(17, 24, 39, 0.65) !important;
+}
+
+.catalogModal {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  color: #111827 !important;
+}
+
+.catalogModal img {
+  background: #f9fafb !important;
+  object-fit: contain !important;
+}
+
+.catalogModalInfo {
+  background: #ffffff !important;
+}
+
+.catalogModalInfo span,
+.catalogModalInfo h2 {
+  color: #111827 !important;
+}
+
+.catalogModalInfo a {
+  background: #111827 !important;
+  color: #ffffff !important;
+}
+
+.catalogClose {
+  background: #111827 !important;
+  color: #ffffff !important;
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .catalogPage {
+    padding: 18px 14px;
+  }
+
+  .catalogHero {
+    padding: 24px !important;
+  }
+
+  .catalogHero h1 {
+    font-size: 34px !important;
+  }
+
+  .catalogFilter {
+    gap: 12px !important;
+  }
+}
+
+/* =========================
+   PUBLIC HERO - DARK GLASS
+========================= */
+
+.catalogHero {
+  position: relative !important;
+  overflow: hidden !important;
+  background: rgba(15, 23, 42, 0.88) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 30px !important;
+  box-shadow:
+    0 30px 90px rgba(15, 23, 42, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.catalogHero::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 360px !important;
+  height: 360px !important;
+  background: #b8fb3c !important;
+  filter: blur(140px) !important;
+  opacity: 0.12 !important;
+  top: -150px !important;
+  left: -120px !important;
+  display: block !important;
+  pointer-events: none !important;
+}
+
+.catalogHero::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 320px !important;
+  height: 320px !important;
+  background: #2563eb !important;
+  filter: blur(130px) !important;
+  opacity: 0.14 !important;
+  right: -100px !important;
+  bottom: -100px !important;
+  display: block !important;
+  pointer-events: none !important;
+}
+
+.catalogHero > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.catalogHero h1 {
+  color: #ffffff !important;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22) !important;
+}
+
+.catalogHero p {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.catalogBadge {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #b8fb3c !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: none !important;
+}
+
+.catalogHero .catalogWhatsappMain {
+  background: #b8fb3c !important;
+  color: #020326 !important;
+  border: 1px solid #b8fb3c !important;
+}
+
+.heroFeaturedSlider {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.heroFeaturedText span,
+.heroFeaturedText h3,
+.heroFeaturedText p {
+  color: #ffffff !important;
+}
+
+.heroFeaturedImage {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-radius: 18px !important;
+}
+
+.heroFeaturedImage img {
+  object-fit: contain !important;
+}
+
+.heroFeaturedActions button,
+.heroFeaturedActions a {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.heroFeaturedActions button:hover,
+.heroFeaturedActions a:hover {
+  background: #b8fb3c !important;
+  color: #020326 !important;
+  border-color: #b8fb3c !important;
+}
+
+.heroFeaturedDots button {
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
+.heroFeaturedDots button.active {
+  background: #b8fb3c !important;
+}
+
+@media (max-width: 768px) {
+  .catalogHero {
+    border-radius: 24px !important;
+  }
+}
+
+/* ===== Category Dropdown ===== */
+
+.catalogFilter select {
+  color: #111827 !important;
+  font-weight: 700;
+  background: #ffffff !important;
+}
+
+.catalogFilter select option {
+  background: #ffffff !important;
+  color: #111827 !important;
+  font-weight: 600;
+}
+
+.catalogFilter select option:hover {
+  background: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+.catalogFilter select option:checked {
+  background: #b8fb3c !important;
+  color: #111827 !important;
+}
+
+/* =========================
+   HERO BACKGROUND IMAGE + STRIPE OVERLAY
+========================= */
+
+.catalogHero {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    linear-gradient(90deg, rgba(4, 10, 20, 0.92), rgba(10, 18, 32, 0.82)),
+    url("/DESIGN/BOLA/NKG-F001.png") center/cover no-repeat !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 35px 90px rgba(15, 23, 42, 0.24) !important;
+}
+
+.catalogHero::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(184, 251, 60, 0.16) 0px,
+      rgba(184, 251, 60, 0.16) 2px,
+      transparent 2px,
+      transparent 18px
+    ),
+    radial-gradient(circle at 8% 85%, rgba(184, 251, 60, 0.18), transparent 22%),
+    radial-gradient(circle at 72% 20%, rgba(37, 99, 235, 0.16), transparent 28%);
+  opacity: 0.55 !important;
+  pointer-events: none !important;
+}
+
+.catalogHero::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    linear-gradient(120deg, transparent 0%, transparent 12%, rgba(184, 251, 60, 0.45) 12.4%, transparent 13.2%, transparent 100%),
+    linear-gradient(120deg, transparent 0%, transparent 15%, rgba(255, 255, 255, 0.08) 15.3%, transparent 17%, transparent 100%),
+    linear-gradient(120deg, transparent 0%, transparent 83%, rgba(184, 251, 60, 0.32) 83.4%, transparent 84.2%, transparent 100%);
+  opacity: 0.75 !important;
+  pointer-events: none !important;
+}
+
+.catalogHero > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.catalogHero h1 {
+  color: #ffffff !important;
+  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+.catalogHero p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.catalogBadge {
+  background: rgba(184, 251, 60, 0.12) !important;
+  color: #b8fb3c !important;
+  border: 1px solid rgba(184, 251, 60, 0.38) !important;
+}
+
+.heroFeaturedSlider {
+  background: rgba(2, 6, 23, 0.42) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.22) !important;
+}
+
+.heroFeaturedImage {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-radius: 18px !important;
+}
+
+.heroFeaturedImage img {
+  object-fit: contain !important;
+}
+
+.heroFeaturedActions button,
+.heroFeaturedActions a {
+  background: rgba(15, 23, 42, 0.72) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.heroFeaturedActions button:hover,
+.heroFeaturedActions a:hover {
+  background: #b8fb3c !important;
+  color: #020326 !important;
+  border-color: #b8fb3c !important;
+}
+
+.heroFeaturedDots button {
+  background: rgba(255, 255, 255, 0.38) !important;
+}
+
+.heroFeaturedDots button.active {
+  background: #b8fb3c !important;
+}
+
+@media (max-width: 768px) {
+  .catalogHero {
+    background:
+      linear-gradient(180deg, rgba(4, 10, 20, 0.9), rgba(10, 18, 32, 0.86)),
+      url("/DESIGN/BOLA/NKG-F001.png") center/cover no-repeat !important;
+  }
+}

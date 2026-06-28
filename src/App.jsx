@@ -102,7 +102,7 @@ function App() {
 
   const getWhatsappLink = (design) => {
   const designCode = getDesignCode(design);
-  const baseUrl = window.location.origin;
+  const baseUrl = "https://nkg-catalog.vercel.app";
   const designLink = `${baseUrl}/design/${designCode}`;
 
   const message = `Hi NKG Apparel,
