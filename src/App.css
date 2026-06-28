@@ -3704,3 +3704,124 @@ select {
     padding: 0 14px !important;
   }
 }
+
+/* ===== SIMPLE HERO FINAL FIX ===== */
+
+.simpleHero {
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(184, 251, 60, 0.12), transparent 28%),
+    radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.16), transparent 32%),
+    linear-gradient(135deg, #020817, #0f172a 55%, #111827) !important;
+}
+
+.heroGlassCard {
+  width: 260px;
+  min-height: 220px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 28px;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.22);
+}
+
+.heroGlassIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(184, 251, 60, 0.14);
+  color: #b8fb3c;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.heroGlassCard h3 {
+  margin: 12px 0 0;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.heroGlassCard p {
+  margin: 8px 0 0 !important;
+  color: rgba(255,255,255,0.68) !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .catalogHero.simpleHero {
+    min-height: auto !important;
+    margin: 0 12px 22px !important;
+    padding: 34px 18px !important;
+    border-radius: 28px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+    text-align: center !important;
+  }
+
+  .catalogHeroText {
+    width: 100% !important;
+  }
+
+  .catalogBadge {
+    margin: 0 auto 20px !important;
+    font-size: 10px !important;
+    letter-spacing: 4px !important;
+    padding: 9px 13px !important;
+  }
+
+  .catalogHero h1 {
+    font-size: 36px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -2px !important;
+    margin: 0 auto !important;
+  }
+
+  .catalogHero h1::after {
+    width: 72px !important;
+    height: 4px !important;
+    margin: 18px auto 0 !important;
+  }
+
+  .catalogHero p {
+    max-width: 330px !important;
+    margin: 18px auto 0 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  .heroGlassCard {
+    width: 100% !important;
+    min-height: 130px !important;
+    border-radius: 22px !important;
+    padding: 20px !important;
+  }
+
+  .heroGlassIcon {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 22px !important;
+  }
+
+  .heroGlassCard h3 {
+    font-size: 18px !important;
+  }
+
+  .heroGlassCard p {
+    font-size: 13px !important;
+  }
+
+  .catalogFilter {
+    margin-top: 0 !important;
+  }
+}

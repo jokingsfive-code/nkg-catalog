@@ -537,15 +537,23 @@ Boleh bagi detail harga dan tempahan?`;
   </div>
 )}
 
-        <section className="catalogHero">
-  {activeFeaturedDesign && (
-    <img
-      className="heroBlurImage"
-      src={activeFeaturedDesign.image_url}
-      alt=""
-      aria-hidden="true"
-    />
-  )}
+        <section className="catalogHero simpleHero">
+  <div className="catalogHeroText">
+    <span className="catalogBadge">NKG APPAREL CATALOG</span>
+
+    <h1>Choose Your Teamwear Design</h1>
+
+    <p>
+      Browse design pilihan NKG Apparel. Pilih design yang berkenan dan terus
+      WhatsApp kami untuk tempahan.
+    </p>
+  </div>
+
+  <div className="heroGlassCard">
+    <div className="heroGlassIcon">▦</div>
+    <h3>Premium Catalog</h3>
+    <p>Pilih design, klik WhatsApp, terus order.</p>
+  </div>
 
   <div className="catalogHeroText">
     <span className="catalogBadge">NKG APPAREL CATALOG</span>
