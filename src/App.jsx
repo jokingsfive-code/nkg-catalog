@@ -101,22 +101,26 @@ function App() {
   };
 
   const getWhatsappLink = (design) => {
-    const designCode = getDesignCode(design);
-    const message = `Hi NKG Apparel,
+  const designCode = getDesignCode(design);
+  const baseUrl = window.location.origin;
+  const designLink = `${baseUrl}/design/${designCode}`;
+
+  const message = `Hi NKG Apparel,
 
 Saya berminat dengan design ini:
 
 Code: ${designCode}
-Name: ${design.name || designCode}
 Category: ${design.category?.name || "Catalog"}
-Image: ${design.image_url}
+
+Preview:
+${designLink}
 
 Boleh bagi detail harga dan tempahan?`;
 
-    return `https://wa.me/${NKG_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
-    )}`;
-  };
+  return `https://wa.me/${NKG_WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    message
+  )}`;
+};
 
   const filteredCatalogDesigns = useMemo(() => {
     if (catalogCategory === "all") return designs;
