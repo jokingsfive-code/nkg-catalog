@@ -488,39 +488,54 @@ Boleh bagi detail harga dan tempahan?`;
 
     return (
       <div className="catalogPage">
-        {selectedCatalogDesign && (
-          <div className="catalogModalOverlay">
-            <div className="catalogModal">
-              <button className="catalogClose" onClick={closeCatalogModal}>
-                ×
-              </button>
+       {selectedCatalogDesign && (
+  <div className="catalogModalOverlay">
+    <div className="catalogModal">
+      <button className="catalogClose" onClick={closeCatalogModal}>
+        ×
+      </button>
 
-              <img
-                src={selectedCatalogDesign.image_url}
-                alt={selectedCatalogDesign.name}
-              />
+      <img
+        src={selectedCatalogDesign.image_url}
+        alt={selectedCatalogDesign.name}
+      />
 
-              <div className="catalogModalInfo">
-                <span>{selectedCatalogDesign.category?.name}</span>
+      <div className="catalogModalInfo">
+        <span>{selectedCatalogDesign.category?.name}</span>
 
-                <small className="modalDesignCode">
-                  {getDesignCode(selectedCatalogDesign)}
-                </small>
+        <small className="modalDesignCode">
+          {getDesignCode(selectedCatalogDesign)}
+        </small>
 
-                <h2>{selectedCatalogDesign.name}</h2>
+        <h2>{selectedCatalogDesign.name}</h2>
 
-                <a
-                  href={getWhatsappLink(selectedCatalogDesign)}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaWhatsapp />
-                  <span>WhatsApp</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
+        <a
+          href={getWhatsappLink(selectedCatalogDesign)}
+          target="_blank"
+          rel="noreferrer"
+          className="whatsappBtn"
+        >
+          <FaWhatsapp />
+          <span>WhatsApp</span>
+        </a>
+
+        <button
+          type="button"
+          className="copyDesignLinkBtn"
+          onClick={() => {
+            const code = getDesignCode(selectedCatalogDesign);
+            const link = `https://nkg-catalog.vercel.app/?design=${code}`;
+
+            navigator.clipboard.writeText(link);
+            toast.success("Design link copied!");
+          }}
+        >
+          🔗 Copy Design Link
+        </button>
+      </div>
+    </div>
+  </div>
+)}
 
         <section className="catalogHero">
           <div>
