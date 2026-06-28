@@ -3039,40 +3039,415 @@ select {
     max-width: 320px !important;
   }
 
-  .heroFeaturedSlider {
-    width: 100% !important;
-    max-width: 360px !important;
-    margin: 0 auto !important;
-    padding: 10px !important;
-    border-radius: 24px !important;
-  }
+  .heroFeaturedSlider{
+    position:relative;
+    width:100%;
+    min-height:420px;
+    border-radius:32px;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.heroFeaturedSlider::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:inherit;
+    background-size:cover;
+    background-position:center;
+
+    filter:blur(18px);
+    transform:scale(1.15);
+
+    opacity:.55;
+}
+
+.heroFeaturedSlider::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(5,12,24,.55),
+        rgba(5,12,24,.65),
+        rgba(5,12,24,.82)
+    );
+}
+
+.heroFeaturedText,
+.heroFeaturedImage,
+.heroFeaturedDots{
+    position:relative;
+    z-index:2;
+}
 
   .heroFeaturedText {
     display: none !important;
   }
 
-  .heroFeaturedImage {
+ .heroFeaturedImage{
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+    padding:0 !important;
+}
+
+  .heroFeaturedImage img{
+    width:92%;
+    max-width:340px;
+    object-fit:contain;
+}
+
+  .heroFeaturedActions{
+    display:none !important;
+}
+  .heroFeaturedDots {
+    margin-top: 10px !important;
+  }
+}
+/* =====================================================
+   NKG CATALOG - FINAL MOBILE BLUR HERO OVERRIDE
+   Generated final block - keep this at very bottom
+===================================================== */
+
+@media screen and (max-width: 768px) {
+  .catalogPage {
+    padding: 0 !important;
+    background: #f5f6f8 !important;
+    color: #111827 !important;
+  }
+
+  .catalogHero {
+    position: relative !important;
     width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    display: grid !important;
-    place-items: center !important;
-    border-radius: 20px !important;
+    min-height: 660px !important;
+    margin: 0 0 0 !important;
+    padding: 48px 20px 86px !important;
+    border-radius: 0 0 34px 34px !important;
+    border: 0 !important;
     overflow: hidden !important;
+    isolation: isolate !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+
+    background: #06111d !important;
+    box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18) !important;
   }
 
-  .heroFeaturedImage img {
+  .catalogHero::before {
+    display: none !important;
+  }
+
+  .catalogHero::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(184, 251, 60, 0.12), transparent 28%),
+      linear-gradient(
+        180deg,
+        rgba(2, 6, 23, 0.72) 0%,
+        rgba(4, 12, 24, 0.62) 44%,
+        rgba(4, 12, 24, 0.9) 100%
+      ) !important;
+  }
+
+  .catalogHero > * {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .catalogHero > div:first-child {
     width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    object-fit: contain !important;
+    max-width: 390px !important;
+    text-align: center !important;
   }
 
+  .catalogBadge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: fit-content !important;
+    margin: 0 auto 24px !important;
+    padding: 10px 16px !important;
+    border-radius: 0 !important;
+    border: 1px solid rgba(184, 251, 60, 0.5) !important;
+    background: rgba(184, 251, 60, 0.08) !important;
+    color: #b8fb3c !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    letter-spacing: 5px !important;
+    font-weight: 900 !important;
+    text-shadow: none !important;
+  }
+
+  .catalogHero h1 {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    color: #ffffff !important;
+    font-size: 40px !important;
+    line-height: 1.04 !important;
+    letter-spacing: -2.2px !important;
+    text-align: center !important;
+    text-shadow: 0 12px 38px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .catalogHero h1 br {
+    display: none !important;
+  }
+
+  .catalogHero h1::after {
+    content: "" !important;
+    display: block !important;
+    width: 74px !important;
+    height: 4px !important;
+    margin: 20px auto 0 !important;
+    border-radius: 999px !important;
+    background: #b8fb3c !important;
+  }
+
+  .catalogHero p {
+    max-width: 340px !important;
+    margin: 22px auto 0 !important;
+    color: rgba(255, 255, 255, 0.84) !important;
+    font-size: 15px !important;
+    line-height: 1.68 !important;
+    text-align: center !important;
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.34) !important;
+  }
+
+  .catalogWhatsappMain.mobileOnly {
+    display: none !important;
+  }
+
+  .heroFeaturedSlider {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 660px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    display: block !important;
+    transform: none !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    z-index: 1 !important;
+  }
+
+  .heroFeaturedSlider::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: -30px !important;
+    background: inherit !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    filter: blur(18px) saturate(0.9) brightness(0.85) !important;
+    transform: scale(1.12) !important;
+    opacity: 0.75 !important;
+    z-index: 0 !important;
+  }
+
+  .heroFeaturedSlider::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background:
+      linear-gradient(180deg, rgba(2, 6, 23, 0.35), rgba(2, 6, 23, 0.68)),
+      rgba(2, 6, 23, 0.18) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .heroFeaturedText,
+  .heroFeaturedImage,
   .heroFeaturedActions {
     display: none !important;
   }
 
   .heroFeaturedDots {
-    margin-top: 10px !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 40px !important;
+    transform: translateX(-50%) !important;
+    z-index: 8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+  }
+
+  .heroFeaturedDots button {
+    width: 10px !important;
+    height: 10px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.36) !important;
+    box-shadow: none !important;
+  }
+
+  .heroFeaturedDots button.active {
+    width: 34px !important;
+    background: #b8fb3c !important;
+  }
+
+  .catalogFilter {
+    position: relative !important;
+    z-index: 20 !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: -36px 14px 34px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .catalogFilter input,
+  .catalogFilter select {
+    width: 100% !important;
+    height: 58px !important;
+    border-radius: 18px !important;
+    border: 1px solid #d1d5db !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: 0 16px 45px rgba(15, 23, 42, 0.12) !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    padding: 0 20px !important;
+  }
+
+  .catalogFilter input::placeholder {
+    color: #9ca3af !important;
+  }
+
+  .catalogFilter select option {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .catalogSection {
+    max-width: none !important;
+    padding: 0 14px !important;
+    margin: 0 auto 36px !important;
+  }
+
+  .catalogSectionHead {
+    text-align: left !important;
+    margin-bottom: 18px !important;
+  }
+
+  .catalogSectionHead h2 {
+    color: #111827 !important;
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1.5px !important;
+    text-align: left !important;
+  }
+
+  .catalogSectionHead h2::after {
+    width: 92px !important;
+    margin: 12px 0 0 !important;
+    background: linear-gradient(90deg, #b8fb3c, transparent) !important;
+  }
+
+  .catalogSectionHead p {
+    color: #6b7280 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+  }
+
+  .catalogGrid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .catalogCard,
+  .featuredCatalogCard {
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  .catalogCard img,
+  .featuredCatalogCard img {
+    width: 100% !important;
+    height: 168px !important;
+    object-fit: contain !important;
+    padding: 8px !important;
+    background: #f9fafb !important;
+  }
+
+  .catalogCardInfo {
+    padding: 10px !important;
+    gap: 6px !important;
+    text-align: left !important;
+    background: #ffffff !important;
+  }
+
+  .designCode {
+    margin: 0 0 6px !important;
+    font-size: 9px !important;
+    padding: 5px 8px !important;
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+    background: #f3f4f6 !important;
+  }
+
+  .catalogCardInfo b {
+    color: #111827 !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .catalogCardInfo span {
+    color: #6b7280 !important;
+    font-size: 10px !important;
+  }
+
+  .catalogCardInfo a {
+    height: 38px !important;
+    border-radius: 12px !important;
+    background: #111827 !important;
+    color: #ffffff !important;
+    border-color: #111827 !important;
+    font-size: 12px !important;
+  }
+
+  .catalogCardInfo a span {
+    color: #ffffff !important;
+    font-size: 12px !important;
   }
 }

@@ -557,7 +557,12 @@ Boleh bagi detail harga dan tempahan?`;
           </div>
 
           {activeFeaturedDesign ? (
-            <div className="heroFeaturedSlider">
+            <div
+  className="heroFeaturedSlider"
+  style={{
+    backgroundImage: `url(${activeFeaturedDesign.image_url})`,
+  }}
+>
               <div className="heroFeaturedText">
                 <span>Featured Pick</span>
                 <h3>{activeFeaturedDesign.name}</h3>
