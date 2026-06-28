@@ -102,7 +102,16 @@ function App() {
 
   const getWhatsappLink = (design) => {
     const designCode = getDesignCode(design);
-    const message = `Hi NKG Apparel, saya berminat dengan design ${designCode} - ${design.name} (${design.category?.name || "Catalog"}). Boleh bagi detail?`;
+    const message = `Hi NKG Apparel,
+
+Saya berminat dengan design ini:
+
+Code: ${designCode}
+Name: ${design.name || designCode}
+Category: ${design.category?.name || "Catalog"}
+Image: ${design.image_url}
+
+Boleh bagi detail harga dan tempahan?`;
 
     return `https://wa.me/${NKG_WHATSAPP_NUMBER}?text=${encodeURIComponent(
       message
