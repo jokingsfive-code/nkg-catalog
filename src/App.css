@@ -3451,3 +3451,37 @@ select {
     font-size: 12px !important;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .heroFeaturedSlider {
+    background: #020817 !important;
+  }
+
+  .heroBlurImage {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: blur(16px) !important;
+    transform: scale(1.14) !important;
+    opacity: 0.42 !important;
+    z-index: 1 !important;
+    display: block !important;
+  }
+
+  .heroFeaturedSlider::after {
+    z-index: 2 !important;
+  }
+
+  .heroFeaturedText,
+  .heroFeaturedImage,
+  .heroFeaturedDots {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .heroFeaturedImage {
+    display: none !important;
+  }
+}
