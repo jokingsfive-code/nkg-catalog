@@ -7,7 +7,9 @@ import "./App.css";
 const NKG_WHATSAPP_NUMBER = "60179655056";
 
 function App() {
-  const isCatalogPage = window.location.pathname === "/catalog";
+  const path = window.location.pathname;
+  const isCatalogPage = path === "/" || path === "/catalog";
+  const isAdminPage = path === "/admin";
 
   const [page, setPage] = useState("categories");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -51,7 +53,32 @@ function App() {
     is_featured: false,
   });
   const [updating, setUpdating] = useState(false);
+  const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
 
+  const [adminPassword, setAdminPassword] = useState("");
+  const [adminUnlocked, setAdminUnlocked] = useState(
+    localStorage.getItem("nkg_admin_unlocked") === "yes"
+  );
+
+  const loginAdmin = (e) => {
+    e.preventDefault();
+
+    if (adminPassword === ADMIN_PASSWORD) {
+      localStorage.setItem("nkg_admin_unlocked", "yes");
+      setAdminUnlocked(true);
+      setAdminPassword("");
+      toast.success("Admin unlocked");
+      return;
+    }
+
+    toast.error("Wrong password");
+  };
+
+  const logoutAdmin = () => {
+    localStorage.removeItem("nkg_admin_unlocked");
+    setAdminUnlocked(false);
+    toast.success("Logged out");
+  };
   useEffect(() => {
     fetchCategories();
     fetchDesigns();
@@ -655,8 +682,37 @@ function App() {
     );
   }
 
+  if (!isAdminPage) {
+    window.location.href = "/";
+    return null;
+  }
+
+  if (!adminUnlocked) {
+    return (
+      <div className="adminLoginPage">
+        <Toaster position="top-right" />
+
+        <form className="adminLoginBox" onSubmit={loginAdmin}>
+          <h1>NKG</h1>
+          <p>APPAREL ADMIN</p>
+
+          <input
+            type="password"
+            placeholder="Enter admin password"
+            value={adminPassword}
+            onChange={(e) => setAdminPassword(e.target.value)}
+          />
+
+          <button type="submit">Login Admin</button>
+
+          <a href="/">View Public Catalog</a>
+        </form>
+      </div>
+    );
+  }
+
   return (
-    <div className={mobileMenuOpen ? "adminShell menuOpen" : "adminShell"}>
+     <div className={mobileMenuOpen ? "adminShell menuOpen" : "adminShell"}>
       <Toaster
         position="top-right"
         toastOptions={{
@@ -1001,9 +1057,12 @@ function App() {
           <div className="adminUser">
             <div className="avatar">A</div>
             <div>
-              <b>Admin</b>
-              <span>Administrator</span>
-            </div>
+  <b>Admin</b>
+  <span>Administrator</span>
+  <button type="button" className="logoutBtn" onClick={logoutAdmin}>
+    Logout
+  </button>
+</div>
           </div>
         </div>
 
