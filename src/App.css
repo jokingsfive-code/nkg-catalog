@@ -3116,637 +3116,136 @@ select {
     margin-top: 10px !important;
   }
 }
-/* =====================================================
-   NKG CATALOG - FINAL MOBILE BLUR HERO OVERRIDE
-   Generated final block - keep this at very bottom
-===================================================== */
 
-@media screen and (max-width: 768px) {
-  .catalogPage {
-    padding: 0 !important;
-    background: #f5f6f8 !important;
-    color: #111827 !important;
-  }
+/* =========================================================
+   NKG CLEAN SIMPLE HERO - FINAL OVERRIDE
+   This block must stay at the bottom of App.css
+========================================================= */
 
-  .catalogHero {
-    position: relative !important;
-    width: 100% !important;
-    min-height: 660px !important;
-    margin: 0 0 0 !important;
-    padding: 48px 20px 86px !important;
-    border-radius: 0 0 34px 34px !important;
-    border: 0 !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 0 !important;
-
-    background: #06111d !important;
-    box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18) !important;
-  }
-
-  .catalogHero::before {
-    display: none !important;
-  }
-
-  .catalogHero::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 2 !important;
-    pointer-events: none !important;
-    background:
-      radial-gradient(circle at 50% 18%, rgba(184, 251, 60, 0.12), transparent 28%),
-      linear-gradient(
-        180deg,
-        rgba(2, 6, 23, 0.72) 0%,
-        rgba(4, 12, 24, 0.62) 44%,
-        rgba(4, 12, 24, 0.9) 100%
-      ) !important;
-  }
-
-  .catalogHero > * {
-    position: relative !important;
-    z-index: 5 !important;
-  }
-
-  .catalogHero > div:first-child {
-    width: 100% !important;
-    max-width: 390px !important;
-    text-align: center !important;
-  }
-
-  .catalogBadge {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: fit-content !important;
-    margin: 0 auto 24px !important;
-    padding: 10px 16px !important;
-    border-radius: 0 !important;
-    border: 1px solid rgba(184, 251, 60, 0.5) !important;
-    background: rgba(184, 251, 60, 0.08) !important;
-    color: #b8fb3c !important;
-    font-size: 10px !important;
-    line-height: 1 !important;
-    letter-spacing: 5px !important;
-    font-weight: 900 !important;
-    text-shadow: none !important;
-  }
-
-  .catalogHero h1 {
-    width: 100% !important;
-    max-width: 380px !important;
-    margin: 0 auto !important;
-    color: #ffffff !important;
-    font-size: 40px !important;
-    line-height: 1.04 !important;
-    letter-spacing: -2.2px !important;
-    text-align: center !important;
-    text-shadow: 0 12px 38px rgba(0, 0, 0, 0.5) !important;
-  }
-
-  .catalogHero h1 br {
-    display: none !important;
-  }
-
-  .catalogHero h1::after {
-    content: "" !important;
-    display: block !important;
-    width: 74px !important;
-    height: 4px !important;
-    margin: 20px auto 0 !important;
-    border-radius: 999px !important;
-    background: #b8fb3c !important;
-  }
-
-  .catalogHero p {
-    max-width: 340px !important;
-    margin: 22px auto 0 !important;
-    color: rgba(255, 255, 255, 0.84) !important;
-    font-size: 15px !important;
-    line-height: 1.68 !important;
-    text-align: center !important;
-    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.34) !important;
-  }
-
-  .catalogWhatsappMain.mobileOnly {
-    display: none !important;
-  }
-
-  .heroFeaturedSlider {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    max-width: none !important;
-    height: 100% !important;
-    min-height: 660px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    overflow: hidden !important;
-    display: block !important;
-    transform: none !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    z-index: 1 !important;
-  }
-
-  .heroFeaturedSlider::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: -30px !important;
-    background: inherit !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    filter: blur(18px) saturate(0.9) brightness(0.85) !important;
-    transform: scale(1.12) !important;
-    opacity: 0.75 !important;
-    z-index: 0 !important;
-  }
-
-  .heroFeaturedSlider::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background:
-      linear-gradient(180deg, rgba(2, 6, 23, 0.35), rgba(2, 6, 23, 0.68)),
-      rgba(2, 6, 23, 0.18) !important;
-    z-index: 1 !important;
-    pointer-events: none !important;
-  }
-
-  .heroFeaturedText,
-  .heroFeaturedImage,
-  .heroFeaturedActions {
-    display: none !important;
-  }
-
-  .heroFeaturedDots {
-    position: absolute !important;
-    left: 50% !important;
-    bottom: 40px !important;
-    transform: translateX(-50%) !important;
-    z-index: 8 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 9px !important;
-  }
-
-  .heroFeaturedDots button {
-    width: 10px !important;
-    height: 10px !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 999px !important;
-    background: rgba(255, 255, 255, 0.36) !important;
-    box-shadow: none !important;
-  }
-
-  .heroFeaturedDots button.active {
-    width: 34px !important;
-    background: #b8fb3c !important;
-  }
-
-  .catalogFilter {
-    position: relative !important;
-    z-index: 20 !important;
-    width: auto !important;
-    max-width: none !important;
-    margin: -36px 14px 34px !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  .catalogFilter input,
-  .catalogFilter select {
-    width: 100% !important;
-    height: 58px !important;
-    border-radius: 18px !important;
-    border: 1px solid #d1d5db !important;
-    background: #ffffff !important;
-    color: #111827 !important;
-    box-shadow: 0 16px 45px rgba(15, 23, 42, 0.12) !important;
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    padding: 0 20px !important;
-  }
-
-  .catalogFilter input::placeholder {
-    color: #9ca3af !important;
-  }
-
-  .catalogFilter select option {
-    background: #ffffff !important;
-    color: #111827 !important;
-  }
-
-  .catalogSection {
-    max-width: none !important;
-    padding: 0 14px !important;
-    margin: 0 auto 36px !important;
-  }
-
-  .catalogSectionHead {
-    text-align: left !important;
-    margin-bottom: 18px !important;
-  }
-
-  .catalogSectionHead h2 {
-    color: #111827 !important;
-    font-size: 30px !important;
-    line-height: 1.1 !important;
-    letter-spacing: -1.5px !important;
-    text-align: left !important;
-  }
-
-  .catalogSectionHead h2::after {
-    width: 92px !important;
-    margin: 12px 0 0 !important;
-    background: linear-gradient(90deg, #b8fb3c, transparent) !important;
-  }
-
-  .catalogSectionHead p {
-    color: #6b7280 !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    text-align: left !important;
-  }
-
-  .catalogGrid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
-  }
-
-  .catalogCard,
-  .featuredCatalogCard {
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    background: #ffffff !important;
-    border: 1px solid #e5e7eb !important;
-    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08) !important;
-  }
-
-  .catalogCard img,
-  .featuredCatalogCard img {
-    width: 100% !important;
-    height: 168px !important;
-    object-fit: contain !important;
-    padding: 8px !important;
-    background: #f9fafb !important;
-  }
-
-  .catalogCardInfo {
-    padding: 10px !important;
-    gap: 6px !important;
-    text-align: left !important;
-    background: #ffffff !important;
-  }
-
-  .designCode {
-    margin: 0 0 6px !important;
-    font-size: 9px !important;
-    padding: 5px 8px !important;
-    color: #111827 !important;
-    border-color: #d1d5db !important;
-    background: #f3f4f6 !important;
-  }
-
-  .catalogCardInfo b {
-    color: #111827 !important;
-    font-size: 13px !important;
-    line-height: 1.25 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-
-  .catalogCardInfo span {
-    color: #6b7280 !important;
-    font-size: 10px !important;
-  }
-
-  .catalogCardInfo a {
-    height: 38px !important;
-    border-radius: 12px !important;
-    background: #111827 !important;
-    color: #ffffff !important;
-    border-color: #111827 !important;
-    font-size: 12px !important;
-  }
-
-  .catalogCardInfo a span {
-    color: #ffffff !important;
-    font-size: 12px !important;
-  }
+.simpleHero .heroFeaturedSlider,
+.simpleHero .heroFeaturedImage,
+.simpleHero .heroFeaturedActions,
+.simpleHero .heroFeaturedDots,
+.simpleHero .heroBlurImage,
+.simpleHero .heroFeaturedText {
+  display: none !important;
 }
 
-@media screen and (max-width: 768px) {
-  .heroFeaturedSlider {
-    background: #020817 !important;
-  }
-
-  .heroBlurImage {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: blur(16px) !important;
-    transform: scale(1.14) !important;
-    opacity: 0.42 !important;
-    z-index: 1 !important;
-    display: block !important;
-  }
-
-  .heroFeaturedSlider::after {
-    z-index: 2 !important;
-  }
-
-  .heroFeaturedText,
-  .heroFeaturedImage,
-  .heroFeaturedDots {
-    position: relative !important;
-    z-index: 5 !important;
-  }
-
-  .heroFeaturedImage {
-    display: none !important;
-  }
-}
-
-/* ===== FIX DESKTOP + MOBILE HERO FINAL ===== */
-
-.heroBlurImage {
-  display: none;
-}
-
-/* DESKTOP FIX */
-@media screen and (min-width: 769px) {
-  .catalogHero {
-    position: relative !important;
-    display: grid !important;
-    grid-template-columns: 0.9fr 1.1fr !important;
-    align-items: center !important;
-    gap: 46px !important;
-    min-height: 520px !important;
-    padding: 58px 64px !important;
-    border-radius: 34px !important;
-    overflow: hidden !important;
-  }
-
-  .catalogHeroText {
-    position: relative !important;
-    z-index: 3 !important;
-  }
-
-  .heroFeaturedSlider {
-    position: relative !important;
-    inset: auto !important;
-    width: 100% !important;
-    max-width: 520px !important;
-    height: auto !important;
-    min-height: auto !important;
-    margin: 0 auto !important;
-    padding: 18px !important;
-    border-radius: 26px !important;
-    background: rgba(2, 6, 23, 0.45) !important;
-    border: 1px solid rgba(255,255,255,0.14) !important;
-    box-shadow: 0 22px 60px rgba(0,0,0,0.22) !important;
-    transform: none !important;
-    z-index: 3 !important;
-  }
-
-  .heroFeaturedImage {
-    display: grid !important;
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    place-items: center !important;
-    border: 0 !important;
-    background: transparent !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-  }
-
-  .heroFeaturedImage img {
-    width: 100% !important;
-    max-width: 460px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    transform: none !important;
-  }
-
-  .heroFeaturedActions,
-  .heroFeaturedText {
-    display: none !important;
-  }
-
-  .heroFeaturedDots {
-    position: static !important;
-    transform: none !important;
-    margin-top: 12px !important;
-    display: flex !important;
-    justify-content: center !important;
-    gap: 8px !important;
-  }
-}
-
-/* MOBILE FIX */
-@media screen and (max-width: 768px) {
-  .catalogPage {
-    padding: 0 !important;
-    background: #f5f6f8 !important;
-  }
-
-  .catalogHero {
-    position: relative !important;
-    min-height: 520px !important;
-    margin: 0 0 0 !important;
-    padding: 44px 20px 34px !important;
-    border-radius: 0 0 30px 30px !important;
-    overflow: hidden !important;
-    background: #020817 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-
-  .heroBlurImage {
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: blur(14px) !important;
-    transform: scale(1.18) !important;
-    opacity: 0.38 !important;
-    z-index: 0 !important;
-  }
-
-  .catalogHero::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(2, 8, 18, 0.74) 0%,
-        rgba(2, 8, 18, 0.62) 45%,
-        rgba(2, 8, 18, 0.88) 100%
-      ) !important;
-    z-index: 1 !important;
-  }
-
-  .catalogHeroText {
-    position: relative !important;
-    z-index: 3 !important;
-    max-width: 390px !important;
-  }
-
-  .catalogBadge {
-    margin: 0 auto 24px !important;
-    padding: 9px 15px !important;
-    font-size: 10px !important;
-    letter-spacing: 5px !important;
-  }
-
-  .catalogHero h1 {
-    font-size: 36px !important;
-    line-height: 1.05 !important;
-    letter-spacing: -2px !important;
-    margin: 0 auto !important;
-  }
-
-  .catalogHero h1::after {
-    width: 72px !important;
-    height: 4px !important;
-    margin: 20px auto 0 !important;
-  }
-
-  .catalogHero p {
-    max-width: 335px !important;
-    margin: 20px auto 0 !important;
-    font-size: 15px !important;
-    line-height: 1.65 !important;
-  }
-
-  .heroFeaturedSlider {
-    position: absolute !important;
-    left: 50% !important;
-    bottom: 26px !important;
-    transform: translateX(-50%) !important;
-    z-index: 4 !important;
-    width: auto !important;
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .heroFeaturedImage {
-    display: none !important;
-  }
-
-  .heroFeaturedActions,
-  .heroFeaturedText {
-    display: none !important;
-  }
-
-  .heroFeaturedDots {
-    position: static !important;
-    transform: none !important;
-    display: flex !important;
-    justify-content: center !important;
-    gap: 9px !important;
-  }
-
-  .heroFeaturedDots button {
-    width: 10px !important;
-    height: 10px !important;
-    border-radius: 999px !important;
-    background: rgba(255,255,255,0.35) !important;
-    border: 0 !important;
-  }
-
-  .heroFeaturedDots button.active {
-    width: 34px !important;
-    background: #b8fb3c !important;
-  }
-
-  .catalogFilter {
-    margin: -22px 14px 30px !important;
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    position: relative !important;
-    z-index: 10 !important;
-  }
-
-  .catalogSection {
-    padding: 0 14px !important;
-  }
-}
-
-/* ===== SIMPLE HERO FINAL FIX ===== */
-
-.simpleHero {
+.catalogHero.simpleHero {
   position: relative !important;
+  max-width: 1240px !important;
+  min-height: 430px !important;
+  margin: 0 auto 28px !important;
+  padding: 58px 64px !important;
+  border-radius: 34px !important;
+  border: 1px solid rgba(184, 251, 60, 0.22) !important;
   overflow: hidden !important;
+
+  display: grid !important;
+  grid-template-columns: 1fr 300px !important;
+  align-items: center !important;
+  gap: 46px !important;
+
   background:
-    radial-gradient(circle at 80% 30%, rgba(184, 251, 60, 0.12), transparent 28%),
-    radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.16), transparent 32%),
+    radial-gradient(circle at 80% 30%, rgba(184, 251, 60, 0.13), transparent 28%),
+    radial-gradient(circle at 30% 80%, rgba(37, 99, 235, 0.16), transparent 34%),
     linear-gradient(135deg, #020817, #0f172a 55%, #111827) !important;
+  box-shadow: 0 28px 90px rgba(2, 6, 23, 0.22) !important;
+  transform: none !important;
+}
+
+.catalogHero.simpleHero::before,
+.catalogHero.simpleHero::after {
+  display: none !important;
+  content: none !important;
+}
+
+.catalogHeroText {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 100% !important;
+  max-width: 580px !important;
+  text-align: left !important;
+}
+
+.catalogHero.simpleHero .catalogBadge {
+  display: inline-block !important;
+  width: fit-content !important;
+  margin: 0 0 22px !important;
+  padding: 10px 16px !important;
+  border: 1px solid rgba(184, 251, 60, 0.55) !important;
+  border-radius: 7px !important;
+  background: rgba(184, 251, 60, 0.06) !important;
+  color: #b8fb3c !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  letter-spacing: 6px !important;
+  font-weight: 900 !important;
+}
+
+.catalogHero.simpleHero h1 {
+  margin: 0 !important;
+  max-width: 600px !important;
+  color: #ffffff !important;
+  font-size: 60px !important;
+  line-height: 1.02 !important;
+  letter-spacing: -3px !important;
+  text-align: left !important;
+}
+
+.catalogHero.simpleHero h1::after {
+  content: "" !important;
+  display: block !important;
+  width: 82px !important;
+  height: 4px !important;
+  margin: 26px 0 0 !important;
+  background: #b8fb3c !important;
+  border-radius: 999px !important;
+}
+
+.catalogHero.simpleHero p {
+  max-width: 470px !important;
+  margin: 24px 0 0 !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  text-align: left !important;
 }
 
 .heroGlassCard {
-  width: 260px;
-  min-height: 220px;
-  border-radius: 28px;
-  border: 1px solid rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 28px;
-  box-shadow: 0 28px 70px rgba(0,0,0,0.22);
+  position: relative !important;
+  z-index: 3 !important;
+  width: 260px !important;
+  min-height: 220px !important;
+  border-radius: 28px !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  background: rgba(255,255,255,0.06) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  display: grid !important;
+  place-items: center !important;
+  text-align: center !important;
+  padding: 28px !important;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.22) !important;
 }
 
 .heroGlassIcon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: rgba(184, 251, 60, 0.14);
-  color: #b8fb3c;
-  display: grid;
-  place-items: center;
-  font-size: 30px;
-  font-weight: 900;
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  background: rgba(184, 251, 60, 0.14) !important;
+  color: #b8fb3c !important;
+  display: grid !important;
+  place-items: center !important;
+  font-size: 30px !important;
+  font-weight: 900 !important;
 }
 
 .heroGlassCard h3 {
-  margin: 12px 0 0;
-  color: #ffffff;
-  font-size: 22px;
+  margin: 12px 0 0 !important;
+  color: #ffffff !important;
+  font-size: 22px !important;
+  line-height: 1.2 !important;
 }
 
 .heroGlassCard p {
@@ -3754,62 +3253,70 @@ select {
   color: rgba(255,255,255,0.68) !important;
   font-size: 14px !important;
   line-height: 1.5 !important;
+  text-align: center !important;
 }
 
 @media screen and (max-width: 768px) {
+  .catalogPage {
+    padding: 12px !important;
+    background: #f5f6f8 !important;
+  }
+
   .catalogHero.simpleHero {
     min-height: auto !important;
-    margin: 0 12px 22px !important;
-    padding: 34px 18px !important;
+    margin: 0 0 18px !important;
+    padding: 34px 18px 22px !important;
     border-radius: 28px !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 22px !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
     text-align: center !important;
   }
 
   .catalogHeroText {
-    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
   }
 
-  .catalogBadge {
-    margin: 0 auto 20px !important;
+  .catalogHero.simpleHero .catalogBadge {
+    margin: 0 auto 18px !important;
     font-size: 10px !important;
     letter-spacing: 4px !important;
     padding: 9px 13px !important;
   }
 
-  .catalogHero h1 {
-    font-size: 36px !important;
-    line-height: 1.05 !important;
-    letter-spacing: -2px !important;
+  .catalogHero.simpleHero h1 {
+    max-width: 340px !important;
     margin: 0 auto !important;
+    font-size: 38px !important;
+    line-height: 1.03 !important;
+    letter-spacing: -2px !important;
+    text-align: center !important;
   }
 
-  .catalogHero h1::after {
+  .catalogHero.simpleHero h1::after {
     width: 72px !important;
     height: 4px !important;
     margin: 18px auto 0 !important;
   }
 
-  .catalogHero p {
+  .catalogHero.simpleHero p {
     max-width: 330px !important;
     margin: 18px auto 0 !important;
     font-size: 15px !important;
     line-height: 1.6 !important;
+    text-align: center !important;
   }
 
   .heroGlassCard {
     width: 100% !important;
-    min-height: 130px !important;
+    min-height: 118px !important;
     border-radius: 22px !important;
-    padding: 20px !important;
+    padding: 18px !important;
   }
 
   .heroGlassIcon {
-    width: 50px !important;
-    height: 50px !important;
+    width: 48px !important;
+    height: 48px !important;
     font-size: 22px !important;
   }
 
@@ -3822,6 +3329,21 @@ select {
   }
 
   .catalogFilter {
-    margin-top: 0 !important;
+    margin: 0 0 28px !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .catalogGrid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .catalogCard img,
+  .featuredCatalogCard img {
+    height: 170px !important;
+    object-fit: contain !important;
+    padding: 8px !important;
   }
 }

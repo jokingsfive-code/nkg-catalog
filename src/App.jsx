@@ -538,134 +538,26 @@ Boleh bagi detail harga dan tempahan?`;
 )}
 
         <section className="catalogHero simpleHero">
-  <div className="catalogHeroText">
-    <span className="catalogBadge">NKG APPAREL CATALOG</span>
+          <div className="catalogHeroText">
+            <span className="catalogBadge">NKG APPAREL CATALOG</span>
 
-    <h1>Choose Your Teamwear Design</h1>
+            <h1>
+              Choose Your
+              <br />
+              Teamwear Design
+            </h1>
 
-    <p>
-      Browse design pilihan NKG Apparel. Pilih design yang berkenan dan terus
-      WhatsApp kami untuk tempahan.
-    </p>
-  </div>
+            <p>
+              Browse design pilihan NKG Apparel. Pilih design yang berkenan dan
+              terus WhatsApp kami untuk tempahan.
+            </p>
+          </div>
 
-  <div className="heroGlassCard">
-    <div className="heroGlassIcon">▦</div>
-    <h3>Premium Catalog</h3>
-    <p>Pilih design, klik WhatsApp, terus order.</p>
-  </div>
-
-  <div className="catalogHeroText">
-    <span className="catalogBadge">NKG APPAREL CATALOG</span>
-    <h1>Choose Your Teamwear Design</h1>
-    <p>
-      Browse design pilihan NKG Apparel. Pilih design yang berkenan dan terus
-      WhatsApp kami untuk tempahan.
-    </p>
-  </div>
-
-  {activeFeaturedDesign ? (
-    <div className="heroFeaturedSlider">
-      <button
-        type="button"
-        className="heroFeaturedImage"
-        onClick={() => setSelectedCatalogDesign(activeFeaturedDesign)}
-      >
-        <img
-          src={activeFeaturedDesign.image_url}
-          alt={activeFeaturedDesign.name || "Featured design"}
-        />
-      </button>
-
-      <div className="heroFeaturedDots">
-        {featuredCatalogDesigns.map((design, index) => (
-          <button
-            key={design.id}
-            type="button"
-            className={index === activeFeaturedIndex ? "active" : undefined}
-            onClick={() => setActiveFeaturedIndex(index)}
-          />
-        ))}
-      </div>
-    </div>
-  ) : (
-    <a
-      className="catalogWhatsappMain desktopOnly"
-      href={`https://wa.me/${NKG_WHATSAPP_NUMBER}`}
-      target="_blank"
-      rel="noreferrer"
-    >
-      WhatsApp NKG
-    </a>
-  )}
-
-
-          {activeFeaturedDesign ? (
-  <div className="heroFeaturedSlider">
-    <img
-      className="heroBlurImage"
-      src={activeFeaturedDesign.image_url}
-      alt=""
-      aria-hidden="true"
-    />
-              <div className="heroFeaturedText">
-                <span>Featured Pick</span>
-                <h3>{activeFeaturedDesign.name}</h3>
-                <p>{activeFeaturedDesign.category?.name}</p>
-              </div>
-
-              <button
-                type="button"
-                className="heroFeaturedImage"
-                onClick={() => setSelectedCatalogDesign(activeFeaturedDesign)}
-              >
-                <img
-                  src={activeFeaturedDesign.image_url}
-                  alt={activeFeaturedDesign.name || "Featured design"}
-                />
-              </button>
-
-              <div className="heroFeaturedActions">
-                <button type="button" onClick={previousFeatured}>
-                  ‹
-                </button>
-
-                <a
-                  href={getWhatsappLink(activeFeaturedDesign)}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  WhatsApp
-                </a>
-
-                <button type="button" onClick={nextFeatured}>
-                  ›
-                </button>
-              </div>
-
-              <div className="heroFeaturedDots">
-                {featuredCatalogDesigns.map((design, index) => (
-                  <button
-                    key={design.id}
-                    type="button"
-                    className={
-                      index === activeFeaturedIndex ? "active" : undefined
-                    }
-                    onClick={() => setActiveFeaturedIndex(index)}
-                  />
-                ))}
-              </div>
-            </div>
-          ) : (
-            <a
-              className="catalogWhatsappMain desktopOnly"
-              href={`https://wa.me/${NKG_WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp NKG
-            </a>
-          )}
+          <div className="heroGlassCard">
+            <div className="heroGlassIcon">▦</div>
+            <h3>Premium Catalog</h3>
+            <p>Pilih design, klik WhatsApp, terus order.</p>
+          </div>
         </section>
 
         <section className="catalogFilter">
