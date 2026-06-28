@@ -3156,6 +3156,7 @@ select {
 
 .catalogHero.simpleHero::before,
 .catalogHero.simpleHero::after {
+  justify-content: flex-start;
   display: none !important;
   content: none !important;
 }
@@ -3273,7 +3274,7 @@ select {
   }
 
   .catalogHeroText {
-    max-width: 100% !important;
+    max-width: 700px;
     text-align: center !important;
   }
 
@@ -3345,5 +3346,48 @@ select {
     height: 170px !important;
     object-fit: contain !important;
     padding: 8px !important;
+  }
+}
+
+/* FORCE CLEAN HERO - REMOVE ALL EXTRA HERO ITEMS */
+
+.simpleHero .heroGlassCard,
+.simpleHero .heroFeaturedSlider,
+.simpleHero .heroFeaturedImage,
+.simpleHero .heroFeaturedActions,
+.simpleHero .heroFeaturedDots,
+.simpleHero .heroBlurImage,
+.simpleHero .catalogWhatsappMain {
+  display: none !important;
+}
+
+/* kalau ada hero duplicate tersalah paste dalam hero, sembunyikan */
+.simpleHero .simpleHero {
+  display: none !important;
+}
+
+.catalogHero.simpleHero {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+@media screen and (max-width: 768px) {
+  .catalogHero.simpleHero {
+    min-height: auto !important;
+    margin: 12px !important;
+    padding: 34px 18px !important;
+    border-radius: 28px !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .catalogHeroText {
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+
+  .catalogFilter {
+    margin-top: 0 !important;
   }
 }
